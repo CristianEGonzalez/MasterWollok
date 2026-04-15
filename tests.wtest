@@ -6,8 +6,8 @@ describe "Tests de concurso MasterWollok" {
     assert.equals(paella.puntosOtorgados(),8)
   }
 
-  test "el risoto otorga 16 puntos en primavera"{
-    risotto.cambiarIngredientePrincipal(pollo)
+  test "el risoto de hongos otorga 16 puntos en primavera"{
+    risotto.cambiarIngredientePrincipal(hongos)
     hongos.cambiarTemporada()
     assert.equals(risotto.puntosOtorgados(),16)
   }
@@ -20,7 +20,7 @@ describe "Tests de concurso MasterWollok" {
 
   test "remy obtiene 13 puntos al cocinar risotto de pollo con ratatouille"{
     remy.ratatouilleLlega()
-    risotto.cambiarIngredientePrincipal(hongos)
+    risotto.cambiarIngredientePrincipal(pollo)
     remy.aprenderReceta(risotto)
     remy.cocinar(risotto)
     assert.equals(remy.puntosAcumulados(),13)
